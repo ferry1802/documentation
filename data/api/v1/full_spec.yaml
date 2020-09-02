@@ -4174,6 +4174,13 @@ components:
             \ For \u201Con average\u201D\n\u201Cat all times\u201D and \u201Cin total\u201D\
             \ aggregation, default is true. `False` otherwise."
           type: boolean
+        restricted_roles:
+          description: A list of role UUIDs that can be pulled from the Roles API.
+            Cannot be used with `locked`.
+          items:
+            description: A role UUID.
+            type: string
+          type: array
         silenced:
           additionalProperties:
             description: ID of the downtime applied to the monitor.
